@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | Çilli Natural</title>
+    <meta name="description"
+        content="Çilli Natural ile iletişime geçin. Ürünlerimiz, siparişleriniz veya markamız hakkında bilgi almak için bize ulaşın.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            padding: 500px 0 80px;
+            text-align: center;
+            background-color: var(--bg-light);
+        }
+
+        .page-title {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+
+        .info-icon {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-right: 1.5rem;
+            margin-top: 0.2rem;
+        }
+
+        .info-content h4 {
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            color: var(--text-main);
+        }
+
+        .info-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Form Styles */
+        .contact-form-wrapper {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        textarea.form-control {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .map-container {
+            margin-top: 4rem;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 400px;
+            background: #e9e9e9;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        @media (max-width: 992px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <!-- Video Background for Navbar -->
+        <video autoplay muted loop playsinline
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2;">
+            <source src="assets/vide01.MOV" type="video/mp4">
+        </video>
+        <!-- Hafif karartma eklendi ki yazılar ve logo tamamen kaybolmasın (isteğe göre silinebilir) -->
+        <div
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.25); z-index: -1;">
+        </div>
+
+        <div class="navbar-container">
+            <a href="anasayfa.html" class="logo"><img src="assets/logo.png" alt="Çilli Natural Logo"></a>
+            <nav class="nav-links">
+                <a href="anasayfa.html">Anasayfa</a>
+                <a href="hikayemiz.html">Hikayemiz</a>
+                <a href="urunler.html">Ürünler</a>
+                <a href="iletisim.html" class="active">İletişim</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="hamburger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header fade-in-up">
+            <div class="container">
+                <h1 class="page-title">Bizimle İletişime Geçin</h1>
+                <p class="lead-text">Doğanın mucizesi zeytinyağımız veya markamız hakkında bilgi almak için bize
+                    ulaşabilirsiniz.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="contact-container">
+
+                    <!-- Contact Info -->
+                    <div class="contact-info fade-in-right">
+                        <h2 style="font-size: 2rem; margin-bottom: 2rem;">İletişim Bilgileri</h2>
+
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt info-icon"></i>
+                            <div class="info-content">
+                                <h4>Adres</h4>
+                                <p>Sakarya Cd. No:156, 35330<br>Balçova/İzmir, Türkiye</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fas fa-phone-alt info-icon"></i>
+                            <div class="info-content">
+                                <h4>Telefon</h4>
+                                <p>+90 (286) 123 45 67<br>+90 (532) 123 45 67</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fas fa-envelope info-icon"></i>
+                            <div class="info-content">
+                                <h4>E-posta</h4>
+                                <p>info@cillinatural.com<br>satis@cillinatural.com</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fas fa-clock info-icon"></i>
+                            <div class="info-content">
+                                <h4>Çalışma Saatleri</h4>
+                                <p>Pazartesi - Cumartesi: 09:00 - 18:00<br>Pazar: Kapalı</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-wrapper fade-in-left">
+                        <h2 style="font-size: 2rem; margin-bottom: 2rem;">Mesaj Gönderin</h2>
+                        <form action="#" method="POST"
+                            onsubmit="event.preventDefault(); alert('Mesajınız başarıyla gönderildi! Size en kısa sürede dönüş yapacağız.');">
+                            <div class="form-group">
+                                <label class="form-label" for="name">Adınız Soyadınız</label>
+                                <input type="text" id="name" class="form-control" placeholder="Örn: Zeynep Altaş"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="email">E-posta Adresiniz</label>
+                                <input type="email" id="email" class="form-control"
+                                    placeholder="Örn: zeynepaltas@mail.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="subject">Konu</label>
+                                <input type="text" id="subject" class="form-control" placeholder="Mesajınızın konusu"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="message">Mesajınız</label>
+                                <textarea id="message" class="form-control"
+                                    placeholder="Bize iletmek istediklerinizi yazın..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary"
+                                style="width: 100%; border: none; cursor: pointer;">Mesajı Gönder</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="map-container fade-in-up">
+                    <!-- Map iframe for Izmir University of Economics -->
+                    <iframe
+                        src="https://maps.google.com/maps?q=İzmir%20Ekonomi%20Üniversitesi&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <img src="assets/logo.png" alt="Çilli Natural Logo" class="footer-logo-img">
+            </div>
+            <div class="footer-col">
+                <ul>
+                    <li><a href="anasayfa.html">Anasayfa</a></li>
+                    <li><a href="hikayemiz.html">Hikayemiz</a></li>
+                    <li><a href="urunler.html">Ürünler</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Çilli Natural. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
