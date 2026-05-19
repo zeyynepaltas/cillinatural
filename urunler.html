@@ -263,8 +263,13 @@
         <section class="page-header fade-in-up"
             style="background-color: var(--bg-light); padding: 500px 0 60px; text-align: center;">
             <div class="container">
-                <h1 class="page-title">Koleksiyonumuz</h1>
-                <p class="lead-text">Doğanın saflığını sofralarınıza taşıyan, özenle hazırlanmış ürün portföyümüz.</p>
+                <h1 class="page-title">Doğadan Aldığını<br>Doğaya Geri Veren</h1>
+                <p class="lead-text" style="max-width: 800px; margin: 0 auto 1.5rem; line-height: 1.6;">
+                    Güneş, rüzgâr ve zeytin ağaçlarının buluştuğu yerden;<br>erken hasat, hafif ve doğal ürünler.
+                </p>
+                <p class="lead-text" style="max-width: 800px; margin: 0 auto 2rem; font-size: 1rem; line-height: 1.6;">
+                    Çilli’nin hikayesi, doğayla kurulan karşılıklı bir bağın hikayesi. Zeytin ağaçlarından gelen her ürün, sadece bir hasat değil; aynı zamanda bir sorumluluk. Bu yüzden üretirken doğayı korumayı, desteklemeyi ve ona iyi bakmayı önceliğimiz haline getiriyoruz.
+                </p>
 
                 <div class="filters-container" id="dynamic-filters">
                     <!-- Kategoriler otomatik olarak JavaScript ile yüklenecek -->
@@ -340,6 +345,18 @@
                 "zeytinyagi_05.png": "300 gr Urla Yeşil Zeytin",
                 "zeytinyagi_06.png": "10x 20 ml Soğuk Sıkım Mini Zeytinyağı Şişeleri",
                 "nemlendirici_01.png": "Zeytinyağlı Dudak Nemlendiricisi"
+            };
+
+            const customPrices = {
+                "defter_01_kahve.png": "₺550,00",
+                "defter_02_yesil.png": "₺550,00",
+                "zeytinyagi_01.png": "₺450,00",
+                "zeytinyagi_02.png": "₺850,00",
+                "zeytinyagi_03.png": "₺450,00",
+                "zeytinyagi_04.png": "₺170,00",
+                "zeytinyagi_05.png": "₺180,00",
+                "zeytinyagi_06.png": "₺290,00",
+                "nemlendirici_01.png": "₺160,00"
             };
 
             const filtersContainer = document.getElementById('dynamic-filters');
@@ -437,6 +454,7 @@
             let productsHTML = '';
             parsedProducts.forEach(p => {
                 const customDesc = customDescriptions[p.filename] || "";
+                const price = customPrices[p.filename] || "";
                 productsHTML += `
                     <div class="product-card filter-item ${p.allCodes} fade-in-up visible">
                         <div class="product-img-wrapper">
@@ -446,7 +464,8 @@
                             </div>
                         </div>
                         <div class="product-details">
-                            <p class="product-desc" style="font-size: 1.1rem; font-weight: 500; color: var(--primary-dark); margin: auto;">${customDesc}</p>
+                            <p class="product-desc" style="font-size: 1.05rem; font-weight: 500; color: var(--primary-dark); margin-bottom: 1rem;">${customDesc}</p>
+                            <p style="font-size: 1.3rem; font-weight: 700; color: var(--primary-color); border-top: 1px solid #eee; padding-top: 0.8rem; margin-top: auto;">${price}</p>
                         </div>
                     </div>
                 `;
